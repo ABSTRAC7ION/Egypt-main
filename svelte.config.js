@@ -1,7 +1,6 @@
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 const dev = process.env.NODE_ENV === 'development';
-//let's goo
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -17,9 +16,9 @@ const config = {
 			path: {
 				base: dev ? '' : 'https://github.com/ABSTRAC7ION/egypt-main'
 			},
-			appDir: 'internal',
+			appDir: 'app_',
 			assets: 'build',
-			fallback: null,
+			fallback: "200.html",
 			precompress: false
 		}),
 
